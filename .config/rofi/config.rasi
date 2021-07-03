@@ -1,0 +1,19 @@
+configuration {
+	modi: "window,drun";
+	width: 40;
+	lines: 12;
+	font: "Terminus bold 12";
+	padding: 5;
+	fixed-num-lines: true;
+	sort: true;
+	case-sensitive: false;
+	cycle: true;
+	sidebar-mode: false;
+	eh: 1;
+	combi-modi: "window,drun";
+	line-margin: 1;
+	line-padding: 2;
+	scroll-method: 1;
+	normalize-match: false;
+}
+@import "/home/ana/.config/rofi/oneshot.rasi"

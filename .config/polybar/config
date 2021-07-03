@@ -1,0 +1,148 @@
+[colors]
+purple-bg = #1e0141
+#fffe57
+#f3e54b
+yellow-fg = #f3e54b
+blue-fg = #64fcff
+
+[bar/left]
+bottom = false
+fixed-center = false
+
+width = 15.75%
+height = 20
+
+background = ${colors.purple-bg}
+foreground = ${colors.yellow-fg}
+
+padding = 2
+module-margin = 1
+
+modules-left = cpu memory
+
+font-0 = "Terminus:style=Bold:size=14;2"
+
+wm-restack = bspwm
+
+[bar/middle]
+bottom = false
+fixed-center = true
+
+width = 30%
+offset-x = 35%
+height = 20
+
+background = ${colors.purple-bg}
+foreground = ${colors.yellow-fg}
+
+padding = 2
+module-margin = 1
+
+modules-center = date bspwm
+
+font-0 = "Terminus:style=Bold:size=14;2"
+
+wm-restack = bspwm
+
+[bar/right]
+bottom = false
+fixed-center = false
+
+width = 12%
+offset-x = 88%
+height = 20
+
+background = ${colors.purple-bg}
+foreground = ${colors.yellow-fg}
+
+padding = 2
+module-margin = 1
+
+modules-right = audio
+
+font-0 = "Terminus:style=Bold:size=14;2"
+
+tray-position = left
+tray-detached = false
+tray-maxsize = 20
+
+tray-background = ${colors.purple-bg}
+
+tray-padding = 1
+tray-scale = 1.0
+tray-offset-y = 2
+
+wm-restack = bspwm
+
+[settings]
+pseudo-transparency = true
+
+[module/cpu]
+type = internal/cpu
+interval = 5
+
+format = <label>
+label = cpu %percentage%% -
+
+[module/memory]
+type = internal/memory
+interval = 10
+
+format = <label>
+label = - ram %gb_used%/%gb_free%
+
+[module/date]
+type = internal/date
+interval = 1.0
+
+date = %d/%m/%Y
+time = %I:%M %P
+
+date-alt = %A, %d %B %Y
+time-alt = %r
+
+format = <label>
+label = %time% | %date%
+
+[module/bspwm]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+
+label-focused = %name%
+label-focused-foreground = ${colors.blue-fg}
+label-focused-padding = 2
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-urgent = %name%!
+label-urgent-background = #F90
+label-urgent-padding = 1
+
+label-empty = %name%
+label-empty-foreground = ${colors.yellow-fg}
+label-empty-padding = 1
+
+[module/audio]
+type = internal/pulseaudio
+
+use-ui-max = false
+interval = 1
+
+format-volume = <label-volume> <bar-volume>
+format-muted = <label-muted>
+
+label-volume = %percentage%%
+
+label-muted = muted
+label-muted-foreground = #F00
+
+bar-volume-width = 10
+bar-volume-empty = -
+bar-volume-fill = -
+bar-volume-indicator = |
+
+click-right = pavucontrol
