@@ -4,9 +4,8 @@ cd paru-bin &&
 makepkg -si &&
 cd ~ &&
 sudo pacman -S bspwm feh kitty pavucontrol pulseaudio rofi sddm spectacle sxhkd terminus-font xorg xorg-server nvidia nvidia-settings lib32-nvidia-utils &&
-paru -S cava picom-jonaburg-git polybar terminus-font-ttf &&
-mkdir ~/.config/bspwm/ ~/.config/cava/ ~/.config/kitty/ ~/.config/polybar/ ~/.config/rofi/ ~/.config/sxhkd/ &&
-sudo cp ~/dotfiles/.config ~/.config &&
+paru -S cava-git picom-jonaburg-git polybar terminus-font-ttf &&
+sudo cp ~/dotfiles/.config/* ~/.config &&
 systemctl enable sddm &&
 chmod u+x ~/.config/bspwm/bspwmrc &&
 chmod u+x ~/.config/polybar/launch.sh &&
