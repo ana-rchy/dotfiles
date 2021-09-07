@@ -3,7 +3,7 @@ git clone https://aur.archlinux.org/paru-bin.git &&
 cd paru-bin &&
 makepkg -si &&
 cd ~ &&
-sudo pacman -S bspwm feh kitty pavucontrol pulseaudio rofi sddm spectacle sxhkd terminus-font xorg xorg-server nvidia nvidia-settings lib32-nvidia-utils &&
+sudo pacman -S bspwm feh kitty pavucontrol polkit-kde-agent pulseaudio rofi sddm spectacle sxhkd terminus-font xorg xorg-server nvidia nvidia-settings lib32-nvidia-utils &&
 paru -S cava-git picom-jonaburg-git polybar terminus-font-ttf &&
 sudo cp -r ~/dotfiles/.config/* ~/.config &&
 systemctl enable sddm &&
