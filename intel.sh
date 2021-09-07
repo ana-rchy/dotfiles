@@ -1,5 +1,5 @@
 cd ~ &&
-git clone https://aur.archlinux.org/paru.git &&
+git clone https://aur.archlinux.org/paru-bin.git &&
 cd paru &&
 makepkg -si &&
 cd ~ &&
