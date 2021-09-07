@@ -1,6 +1,6 @@
 cd ~ &&
 git clone https://aur.archlinux.org/paru-bin.git &&
-cd paru &&
+cd paru-bin &&
 makepkg -si &&
 cd ~ &&
 sudo pacman -S bspwm feh kitty pavucontrol pulseaudio rofi sddm spectacle sxhkd terminus-font xorg xorg-server nvidia nvidia-settings lib32-nvidia-utils &&
