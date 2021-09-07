@@ -5,7 +5,7 @@ makepkg -si &&
 cd ~ &&
 sudo pacman -S bspwm feh kitty pavucontrol pulseaudio rofi sddm spectacle sxhkd terminus-font xorg xorg-server mesa lib32-mesa xf86-video-intel vulkan-intel &&
 paru -S cava picom-jonaburg-git polybar terminus-font-ttf &&
-mkdir ~/.config/bspwm/ ~/.config/cava/ ~/.config/kitty/ ~/.config/polybar/ ~/.config/rofi/ ~/.config/sxhkd/ &&
+mkdir ~/.config/bspwm/ ~/.config/kitty/ ~/.config/polybar/ ~/.config/rofi/ ~/.config/sxhkd/ &&
 sudo cp ~/dotfiles/.config ~/.config &&
 systemctl enable sddm &&
 chmod u+x ~/.config/bspwm/bspwmrc &&
